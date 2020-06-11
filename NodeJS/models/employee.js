@@ -1,10 +1,11 @@
 const mongoose = require('mongoose');
 
 var Employee = mongoose.model('Employee', {
-    name: { type: String },
-    position: { type: String },
-    office: { type: String },
-    salary: { type: Number }
+    fname: { type: String },
+    lname: { type: String },
+    email: { type: String },
+    phone: { type: Number },
+    
 });
 
 module.exports = { Employee };

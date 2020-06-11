@@ -8,29 +8,31 @@
               <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="employeeService.selectedEmployee._id">
               <div class="row">
                 <div class="input-field col s12">
-                  <input type="text" name="name" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.name" placeholder="Enter full name" required>
-                  <label>Name :
+                  <input type="text" name="fname" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.fname" placeholder="Enter first name" required>
+                  <label>First Name :
                     <label class="red-text">*</label>
                   </label>
                 </div>
               </div>
               <div class="row">
                 <div class="input-field col s12">
-                  <input type="text" name="position" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.position" placeholder="Eg : Snr. Developer">
-                  <label>Position :</label>
+                  <input type="text" name="lname" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.lname" placeholder="Eg : Sethi">
+                  <label> Last Position :</label>
                 </div>
               </div>
               <div class="row">
                 <div class="input-field col s12">
-                  <input type="text" name="office" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.office" placeholder="Enter office location">
-                  <label>Office :</label>
+                  <input type="text" name="email" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.email" placeholder="Enter office email">
+                  <label>Email :</label>
                 </div>
               </div>
               <div class="row">
                 <div class="input-field col s12">
-                  <input type="text" name="salary" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.salary" placeholder="Salary per annum">
-                  <label>Salary :</label>
+                  <input type="text" name="phone" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.phone" placeholder="Phone Number">
+                  <label>Phone :</label>
                 </div>
+                <input type="file" name="imgUploader" multiple />
+        
               </div>
               <div class="row">
                 <div class="input-field col s12">
@@ -39,21 +41,24 @@
                 </div>
               </div>
             </form>
+
+            
           </div>
+         
           <div class="col s7">
               <table class="responsive-table highlight">
                   <thead>
                     <tr>
-                      <th>Name</th>
-                      <th>Position</th>
-                      <th>Office</th>
+                      <th>First Name</th>
+                      <th>Last Name</th>
+                      <th>Phone</th>
                       <th></th>
                     </tr>
                   </thead>
                   <tr *ngFor="let emp of employeeService.employees">
-                    <td>{{emp.name}}</td>
-                    <td>{{emp.position}}</td>
-                    <td>{{emp.office}}</td>
+                    <td>{{emp.fname}}</td>
+                    <td>{{emp.lname}}</td>
+                    <td>{{emp.email}}</td>
                     <td>
                         <a class="action-btn" (click)="onEdit(emp)">
                           <i class="material-icons">edit</i>
@@ -69,5 +74,7 @@
       </div>
     </div>
   </div>
-
+  
 </div>
+
+  
